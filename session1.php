@@ -1,63 +1,79 @@
-<?php 
-include ("./sesion.php");
-include("./config.php");?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="zxx">
 <head>
-    <title>Panel de control - PhishingDetected</title>
-    
-    <?php include("./components/head.php");?>
-    
+	<title>Boto | Photography HTML Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Boto Photo Studio HTML Template">
+	<meta name="keywords" content="photo, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/fresco.css"/>
+	<link rel="stylesheet" href="css/slick.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
 </head>
 <body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-    <div id="wrapper">
-<header class="tech-header header">
-    <div class="container-fluid">
-        <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-            <a class="navbar-brand" href="index.php"><img src="images/logo.png" width="130" alt=""></a>
-            <nav class="main__menu">
-			<?php include ("./components/nav.php")?>
-			</nav>
-            <ul class="navbar-nav mr-2 mb-2 mt-2 text-center order-1 order-md-last">
-                <li class="nav-item">                           
-                <a class='nav-link' href='salir.php'><i class='fa fa-user'></i> Cerrar Sesión </a>            
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-</div>
-        
-<!-- Contenido --> 
-<section class='section'>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-                <div class='page-wrapper'>
-                    <div class='custombox authorbox clearfix carga-post'>
-                        <h4 class='small-title'>Agregar post al foro</h4>
-                        <form class='form-floating'method="POST" action="./components/cargar-publicacion.php" enctype='multipart/form-data'>
-                                <input type='text' class='form-control form-admin' placeholder='Ingrese el titulo del post'name="titulo">      
-                                <div class="btn boton-admin form-admin">
-                                    <label for="archivo">Elige la imagen para subir </label>
-                                    <input type="file" class="" accept=".jpg,.jpeg,.png" multiple id="archivo" name="archivo">
-                                </div>
-                                <textarea class='form-control form-admin mensaje-post' placeholder='Ingresa tu mensaje' name="mensaje"></textarea>
-                                <div>
-                                    <button type='submit' class='btn boton-admin col-12'>Publicar post <i class='fa fa-envelope-open-o'></i></button>
-                                </div>
-                        </form>                              
-                    </div>
-<hr class='invis1'>
+	<!-- Header Section -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
+					<div class="header__social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
+					<a href="./index.html" class="site-logo">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
+					<div class="header__switches">
+						<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
+						<a href="#"><i class="fa fa-shopping-cart"></i></a>
+					</div>
+				</div>
+			</div>
+			<nav class="main__menu">
+				<?php include ("./components/nav1.php")?>
+				</nav>
+		</div>
+	</header>
+	<!-- Header Section end -->
 
+	<!-- Hero Section -->
+	
+	<!-- Hero Section end -->
 
+	
 
+	
 
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/fresco.min.js"></script>
+	<script src="js/main.js"></script>
 
-<hr class='invis'>
-
-
-</section>
-</body>
+	</body>
 </html>

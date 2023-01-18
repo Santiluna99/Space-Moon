@@ -1,3 +1,7 @@
+<?php 
+include ("./sesion.php");
+include("./config.php");
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -10,8 +14,6 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
-	<link rel="stylesheet" href="css/fresco.css"/>
-
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 
@@ -53,86 +55,47 @@
 				</div>
 			</div>
 			<nav class="main__menu">
-				<ul class="nav__menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./about.html">About</a></li>
-					<li><a href="./gallery.html" class="menu--active">Gallery</a></li>
-					
-					<li><a href="./contact.html">Contact</a></li>
-				</ul>
+			<?php include ("./components/nav1.php")?>
 			</nav>
 		</div>
 	</header>
 	<!-- Header Section end -->
 
-	<!-- About Page -->
-	<div class="gallery__page">
-		<div class="gallery__warp">
+	<!-- Contact Page -->
+	<section class="contact__page">
+		<div class="contact__warp">
 			<div class="row">
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/1.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/1.jpg" alt="">
-					</a>
+				<div class="col-md-6">
+					<h2>Contact Me</h2>
+					<div class="contact__social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/2.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/2.jpg" alt="">
-					</a>
+                <form action="./components/guardar-contacto.php" method="POST">
+				<div class="col-md-6">
+					<div class="contact__text">
+						<p><input type="text" class="col-12" name="numero" value="<?php echo $contenido['contacto']['numero']?>"></input></p>
+						<p><input type="text" class="col-12" name="mail" value="<?php echo $contenido['contacto']['mail']?>"></input></p>
+						<p><input type="text" class="col-12" name="direccion" value="<?php echo $contenido['contacto']['direccion']?>"></input></p>
+                        <button type="submit" class="site-btn">Guardar Cambios</button>
+					</div>
 				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/3.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/3.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/4.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/4.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/5.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/5.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/6.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/6.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/7.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/7.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/8.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/8.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/9.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/9.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/10.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/10.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/11.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/11.jpg" alt="">
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6">
-					<a class="gallery__item fresco" href="img/gallery/12.jpg" data-fresco-group="gallery">
-						<img src="img/gallery/12.jpg" alt="">
-					</a>
-				</div>
+                
+                </form>
 			</div>
+			<form class="contact__form">
+				<input type="text" placeholder="Name">
+				<input type="text" placeholder="Email">
+				<input type="text" placeholder="Phone">
+				<textarea placeholder="Message"></textarea>
+				
+			</form>
 		</div>
-	</div>
-	<!-- About Page end -->
+	</section>
+	<!-- Contact Page end -->
 
 	<!-- Footer Section -->
 	<footer class="footer__section">
@@ -161,7 +124,6 @@
 	<script src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/fresco.min.js"></script>
 	<script src="js/main.js"></script>
 
 	</body>

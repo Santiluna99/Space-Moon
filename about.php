@@ -1,3 +1,5 @@
+<?php 
+include("./config.php");?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -10,6 +12,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
+
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 
@@ -38,61 +41,60 @@
 					</div>
 				</div>
 				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
-					<a href="./index.html" class="site-logo">
+					<a  class="site-logo">
 						<img src="img/logo.png" alt="">
 					</a>
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
 					<div class="header__switches">
-						<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
-						<a href="#"><i class="fa fa-shopping-cart"></i></a>
+						
 					</div>
 				</div>
 			</div>
 			<nav class="main__menu">
-				<ul class="nav__menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./about.html">About</a></li>
-					<li><a href="./gallery.html">Gallery</a></li>
-					<li><a href="./contact.html" class="menu--active">Contact</a></li>
-				</ul>
+			<?php include ("./components/nav.php")?>
 			</nav>
 		</div>
 	</header>
-	<!-- Header Section end -->
+	
 
-	<!-- Contact Page -->
-	<section class="contact__page">
-		<div class="contact__warp">
+	<!-- About Page -->
+	<section class="about__page">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">
-					<h2>Contact Me</h2>
-					<div class="contact__social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
+				<div class="col-lg-4">
+					<div class="about__text">
+						<h3 class="about__title">Sobre mi</h3>
+						<div class="about__meta">
+							<img src="img/2.gif" alt="">
+							<div class="about__meta__info">
+								<h5><?php echo $contenido['acercade']['nombre']?></h5>
+								<p>Desarrollador de Software</p>
+							</div>
+						</div>
+						<p><?php echo $contenido['acercade']['titulo']?></p>
+						
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="contact__text">
-						<p>Phone: 001-1234-666666</p>
-						<p>Email: hi.colorlib@gmail.com</p>
-						<p>Address: 562 Domenic Corner Suite 613</p>
+				<div class="col-lg-4">
+					<div class="experience__text">
+						<h3 class="about__title">Sobre la pagina</h3>
+						<div class="experience__item">
+							<h4><?php echo $contenido['acercade']['titulo1']?></h4>
+							<p><?php echo $contenido['acercade']['descripcion']?></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="skills__text">
+						<h3 class="about__title"><?php echo $contenido['acercade']['titulo2']?></h3>
+						<p><?php echo $contenido['acercade']['descripcion2']?></p>
 					</div>
 				</div>
 			</div>
-			<form class="contact__form">
-				<input type="text" placeholder="Name">
-				<input type="text" placeholder="Email">
-				<input type="text" placeholder="Phone">
-				<textarea placeholder="Message"></textarea>
-				<button class="site-btn">Send Message</button>
-			</form>
 		</div>
 	</section>
-	<!-- Contact Page end -->
+	<!-- About Page end -->
 
 	<!-- Footer Section -->
 	<footer class="footer__section">

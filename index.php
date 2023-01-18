@@ -47,9 +47,7 @@
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
 					<div class="header__switches">
-						<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
-						<a href="#"><i class="fa fa-shopping-cart"></i></a>
+					
 					</div>
 				</div>
 			</div>

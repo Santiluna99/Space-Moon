@@ -1,9 +1,4 @@
 <?php include("lector-publicacion.php")?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -80,66 +75,27 @@
 	<!-- Hero Section -->
 	<section class="hero__section">
 		<div class="hero-slider">
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/sci-fi-nebula-green-planet-space-hd-wallpaper-preview.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/sci-fi-nebula-green-planet-space-hd-wallpaper-preview.jpg" alt="">
-				</a>
-			</div>
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/galaxy.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/galaxy.jpg" alt="">
-					</a>
-			</div>
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/jameswebb.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/jameswebb.jpg" alt="">
-				</a>	
-			</div>
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/universe.png" data-fresco-group="projects">
-					<img src="img/hero-slider/universe.png" alt="">
-				</a>	
-			</div>
 			
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/UNIVERSO-DINAMICO.gif" data-fresco-group="projects">
-					<img src="img/hero-slider/UNIVERSO-DINAMICO.gif" alt="">
-				</a>	
-			</div>
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/space-planet-nebula-stars-wallpaper-preview.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/space-planet-nebula-stars-wallpaper-preview.jpg" alt="">
-				</a>	
-			</div>
-			
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/james.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/james.jpg" alt="">
-				</a>	
-			</div>
-			<div class="slide-item">
-				<a class="fresco" href="img/hero-slider/7.jpg" data-fresco-group="projects">
-					<img src="img/hero-slider/7.jpg" alt="">
-				</a>	
-			</div>
 			<?php
 foreach ($publicacion as $section=>$values){
     foreach($values as $key=>$value){
     echo "
+	
+	
 	<div class='slide-item'>
-				<a class='fresco' href='img/hero-slider/'.$publicacion[$section]['titulo'].'/.jpg' data-fresco-group='projects'>
-					<img src='img/hero-slider/'.$publicacion[$section]['titulo'].'/.jpg' alt=''>
-				</a>	
+	
+				<a class='fresco' href='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"."' data-fresco-group='projects'>
+					<img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
+				</a>
+				<div class='hero-text-slider'>
+	<div class='text-item'>
+	<h2>".$publicacion[$section]['titulo']."</h2>
+	<p>".$publicacion[$section]['mensaje']."</p>
+	</div>
+	</div>
 			</div>
-    <div class='blog-box row'>
-    <div class='col-md-4'>
-        <div class='post-media'>
-            <img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt='' class='img-fluid'>
-            <div class='hovereffect'></div>
-        </div><!-- end media -->
-    </div><!-- end col -->
-    <!-- end meta -->
-    </div><!-- end blog-box -->
+    
+
     ";
     break;
     }
@@ -148,8 +104,9 @@ foreach ($publicacion as $section=>$values){
 }
 ?>
 		</div>
-		<div class="hero-text-slider">
-			<div class="text-item">
+		 <div class="hero-text-slider">
+			
+			<!--<div class="text-item">
 				<h2>Nature</h2>
 				<p>Photography</p>
 			</div>
@@ -176,7 +133,8 @@ foreach ($publicacion as $section=>$values){
 			<div class="text-item">
 				<h2>Remarkable</h2>
 				<p>Photography</p>
-			</div>
+			</div> -->
+
 		</div>
 	</section>
 	<!-- Hero Section end -->
@@ -245,7 +203,7 @@ foreach ($publicacion as $section=>$values){
 			
 		</div>
 	</div> -->
-	ACTUALIZAR ABOUT CON SESSION,
+	
 	<!-- Search End -->
 
 	<!--====== Javascripts & Jquery ======-->

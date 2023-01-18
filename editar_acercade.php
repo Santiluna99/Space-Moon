@@ -1,3 +1,8 @@
+<?php 
+include ("./sesion.php");
+include("./config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -52,12 +57,7 @@
 				</div>
 			</div>
 			<nav class="main__menu">
-				<ul class="nav__menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./about.html" class="menu--active">About</a></li>
-					<li><a href="./gallery.html">Gallery</a></li>
-					<li><a href="./contact.html">Contact</a></li>
-				</ul>
+            <?php include ("./components/nav1.php")?>
 			</nav>
 		</div>
 	</header>
@@ -67,60 +67,38 @@
 	<section class="about__page">
 		<div class="container-fluid">
 			<div class="row">
+              <form action="./components/guardar-acercade.php" method="POST">
 				<div class="col-lg-4">
 					<div class="about__text">
-						<h3 class="about__title">About Me</h3>
+						<h3 class="about__title">Sobre mi</h3>
 						<div class="about__meta">
 							<img src="img/profile.jpg" alt="">
 							<div class="about__meta__info">
-								<h5>Caleb Rodriguez</h5>
-								<p>PHOTOGRAPHER / DESIGNER</p>
+								<h5><input type="text" class="" name="nombre" value="<?php echo $contenido['acercade']['nombre']?>"></input></h5>
+								<p>Desarrollador de Software</p>
 							</div>
 						</div>
-						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat incididunt ut labore et dolore magna aliqua.</p>
-						<img src="img/signature.png" alt="">
+						<p><input type="text" class="" name="titulo" value="<?php echo $contenido['acercade']['titulo']?>"></input></p>
+						
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="experience__text">
-						<h3 class="about__title">Experience</h3>
+						<h3 class="about__title">Sobre la pagina</h3>
 						<div class="experience__item">
-							<h4>Envato Co.</h4>
-							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-						</div>
-						<div class="experience__item">
-							<h4>Unplash Co.</h4>
-							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-						</div>
-						<div class="experience__item">
-							<h4>Colorlib Inc.</h4>
-							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+							<h4><input type="text" class="" name="titulo1" value="<?php echo $contenido['acercade']['titulo1']?>"></input></h4>
+							<p><input type="text" class="" name="descripcion" value="<?php echo $contenido['acercade']['descripcion']?>"></input></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="skills__text">
-						<h3 class="about__title">Skills</h3>
-						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. </p>
-						<div class="single-progress-item">
-							<h6>Development</h6>
-							<div class="progress-bar-style" data-progress="70"></div>
-						</div>
-						<div class="single-progress-item">
-							<h6>APP Design</h6>
-							<div class="progress-bar-style" data-progress="70"></div>
-						</div>
-						<div class="single-progress-item">
-							<h6>Graphic Design</h6>
-							<div class="progress-bar-style" data-progress="70"></div>
-						</div>
-						<div class="single-progress-item">
-							<h6>Photography</h6>
-							<div class="progress-bar-style" data-progress="70"></div>
-						</div>
+						<h3 class="about__title"><input type="text" class="" name="titulo2" value="<?php echo $contenido['acercade']['titulo2']?>"></input></h3>
+						<p><input type="text" class="" name="descripcion2" value="<?php echo $contenido['acercade']['descripcion2']?>"></input></p>
 					</div>
 				</div>
+                <button type="submit" class="site-btn">Guardar Cambios</button>
+             </form>
 			</div>
 		</div>
 	</section>
