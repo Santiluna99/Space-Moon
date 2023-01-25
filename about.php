@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include("./config.php");?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -35,9 +36,9 @@ include("./config.php");?>
 			<div class="row">
 				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
 					<div class="header__social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class=""></i></a>
+						<a href="#"><i class=""></i></a>
+						<a href="#"><i class=""></i></a>
 					</div>
 				</div>
 				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
@@ -51,9 +52,9 @@ include("./config.php");?>
 					</div>
 				</div>
 			</div>
-			<nav class="main__menu">
+			
 			<?php include ("./components/nav.php")?>
-			</nav>
+			
 		</div>
 	</header>
 	

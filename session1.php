@@ -1,3 +1,8 @@
+<?php 
+include ("./sesion.php");
+include("./config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>

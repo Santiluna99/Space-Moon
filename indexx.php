@@ -1,4 +1,3 @@
-<?php include("lector-publicacion.php")?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -48,65 +47,67 @@
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
 					<div class="header__switches">
-						
-						<!-- <a href="#" class="nav-switch"><i class="fa fa-bars"></i></a> -->
-						
-						<!-- <ul class="">
-							<li class=""><a href="salir.php">Cerrar Sesion</a></li>
-						</ul> -->
-						<?php
-                if(empty($_SESSION['nombre'])){
-                    echo "<a class='nav-link' href='login.php'><i class='fa fa-user'></i> Iniciar Sesión </a>";
-                }else{
-                    echo "<a class='nav-link' href='session1.php'><i class='fa fa-user'></i> Mi cuenta </a>";
-                }?>
-
-					</div> 
+					
 					</div>
 				</div>
 			</div>
 			<nav class="main__menu">
-			<?php include ("./components/nav.php")?>
-			</nav>
+				<?php include ("./components/nav_2.php")?>
+				</nav>
 		</div>
 	</header>
 	<!-- Header Section end -->
-	
+
 	<!-- Hero Section -->
 	<section class="hero__section">
-		<div class="hero-slider">
-			
-			<?php
-foreach ($publicacion as $section=>$values){
-    foreach($values as $key=>$value){
-    echo "
-	
-	
-	<div class='slide-item'>
-	
-				<a class='fresco' href='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"."' data-fresco-group='projects'>
-					<img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
+	<div class="hero-slider">
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/sci-fi-nebula-green-planet-space-hd-wallpaper-preview.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/sci-fi-nebula-green-planet-space-hd-wallpaper-preview.jpg" alt="">
 				</a>
-				<div class='hero-text-slider'>
-	<div class='text-item'>
-	<h2>".$publicacion[$section]['titulo']."</h2>
-	<p>".$publicacion[$section]['mensaje']."</p>
-	</div>
-	</div>
 			</div>
-    
-
-    ";
-    break;
-    }
-    echo "<hr class='invis'>";
-    
-}
-?>
-		</div>
-		 <div class="hero-text-slider">
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/galaxy.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/galaxy.jpg" alt="">
+					</a>
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/jameswebb.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/jameswebb.jpg" alt="">
+				</a>	
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/universe.png" data-fresco-group="projects">
+					<img src="img/hero-slider/universe.png" alt="">
+				</a>	
+			</div>
 			
-			<!--<div class="text-item">
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/UNIVERSO-DINAMICO.gif" data-fresco-group="projects">
+					<img src="img/hero-slider/UNIVERSO-DINAMICO.gif" alt="">
+				</a>	
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/space-planet-nebula-stars-wallpaper-preview.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/space-planet-nebula-stars-wallpaper-preview.jpg" alt="">
+				</a>	
+			</div>
+			<div class="single-post-media">
+                        <img src="/img/<?php echo $publicacion["Publicacion santi"] ["imagen"] ?>" alt="" class="img-fluid">
+                    </div>
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/james.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/james.jpg" alt="">
+				</a>	
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/hero-slider/7.jpg" data-fresco-group="projects">
+					<img src="img/hero-slider/7.jpg" alt="">
+				</a>	
+			</div>
+		</div>
+		<div class="hero-text-slider">
+			<div class="text-item">
 				<h2>Nature</h2>
 				<p>Photography</p>
 			</div>
@@ -133,30 +134,11 @@ foreach ($publicacion as $section=>$values){
 			<div class="text-item">
 				<h2>Remarkable</h2>
 				<p>Photography</p>
-			</div> -->
-
+			</div>
 		</div>
 	</section>
 	<!-- Hero Section end -->
-	<h2>Cargue aqui su imagen</h2>
-				<div class="col-lg-9">
-					<div class="row">
-						<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-						<form class='form-floating'method="POST" action="cargar-publicacion.php" enctype='multipart/form-data'>
-                                <input type='text' class='form-control form-admin' placeholder='Ingrese el titulo del post'name="titulo">      
-                                <div class="btn boton-admin form-admin">
-                                    <label for="archivo">Elige la imagen para subir </label>
-                                    <input type="file" class="" accept=".jpg,.jpeg,.png" multiple id="uploadedFile" name="archivo">
-                                </div>
-                                <textarea class='form-control form-admin mensaje-post' placeholder='Ingresa tu mensaje' name="mensaje"></textarea>
-                                <div>
-                                    <button value='Subir' type='submit' class='btn boton-admin col-12' style="background-color='blue'" name="uploadBtn">Publicar post <i class='fa fa-envelope-open-o'></i></button>
-                                </div>
-                        </form>
-                        </div>
-						
-					</div>
-				</div>
+
 	<!-- Footer Section -->
 	<footer class="footer__section">
 		<div class="container">
@@ -170,40 +152,37 @@ foreach ($publicacion as $section=>$values){
 	<!-- Footer Section end -->
 
 	<!-- Search Begin -->
-	<!-- <div class="search-model">
+	<div class="search-model">
 		
 		<div class="h-100 d-flex align-items-center justify-content-center">
 			
 			<div class="search-close-switch">+</div>
-			
-			<form class="search-model-form">
-				<h2>Ingresar</h2>
-				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-					<form id="form" class="form" method="POST" action="mostrar_datos.php">
-					
-						<div class="row">
-							
-							<div class="col-6 mb-3">
-								<input type="email" name="email" id="email" class="form-control" placeholder="Your Emai">
-							</div>
-							<div class="col-6 mb-3">
-								<input type="password" name="password" id="password" class="form-control" placeholder="Your Password">
-							</div>
-							
-						
-
-							<div class="col-12" style="position: relative">
-								<input type="submit" value="submit" class="btn btn-primary"style="background:rgb(8, 149, 237) ;">
-							</div>
+				<div class="container">
+					<form id="form" class="form" method="POST" enctype='multipart/form-data' action="registrarusuario.php">
+						<h2>Registrate en este formulario</h2>
+						<br>
+						<div class="form-control">
+							<label for="nombre"></label>
+							<input type="text" name="nombre" id="nombre" placeholder="Ingresa un nombre de usuario">
 						</div>
-						
+						 <div class="form-control">
+							<label for="imagen"></label>
+							<input type="file" name="archivo" id="archivo">
+						</div>
+						<div class="form-control">
+							<label for="email"></label>
+							<input type="text" name="email" id="email" placeholder="ejemplo@gmail.com">
+						</div>
+						<div class="form-control">
+							<label for="clave"></label>
+							<input type="password" name="clave" id="clave" placeholder="Ingresa una clave">
+						</div>
+						<button>Enviar</button>
 					</form>
 				</div>
-			</form>
 			
 		</div>
-	</div> -->
-	
+	</div>
 	<!-- Search End -->
 
 	<!--====== Javascripts & Jquery ======-->
@@ -215,4 +194,3 @@ foreach ($publicacion as $section=>$values){
 
 	</body>
 </html>
-

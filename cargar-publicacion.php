@@ -77,5 +77,5 @@ if ((($_FILES["archivo"]["type"] == "image/jpg")
 echo "<br>";
 echo "<div align='center'><h3>Exito la publicacion $titulo, se ha subido correctamente!</h3>";
 echo "<br>";
-echo "<a href='indexlog.php'>Ver posts publicados";
+echo "<a href='index.php'>Ver posts publicados";
 ?>
