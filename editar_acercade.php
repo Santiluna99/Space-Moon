@@ -2,11 +2,10 @@
 include ("./sesion.php");
 include("./config.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Boto | Photography HTML Template</title>
+	<title>Space Moon</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Boto Photo Studio HTML Template">
 	<meta name="keywords" content="photo, html">
@@ -50,9 +49,7 @@ include("./config.php");
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
 					<div class="header__switches">
-						<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
-						<a href="#"><i class="fa fa-shopping-cart"></i></a>
+						
 					</div>
 				</div>
 			</div>
@@ -62,23 +59,23 @@ include("./config.php");
 		</div>
 	</header>
 	<!-- Header Section end -->
-
 	<!-- About Page -->
 	<section class="about__page">
 		<div class="container-fluid">
+		<form action="./components/guardar-acercade.php" method="POST">
 			<div class="row">
-              <form action="./components/guardar-acercade.php" method="POST">
+              
 				<div class="col-lg-4">
 					<div class="about__text">
 						<h3 class="about__title">Sobre mi</h3>
 						<div class="about__meta">
-							<img src="img/profile.jpg" alt="">
+							<img src="img/2.gif" alt="">
 							<div class="about__meta__info">
 								<h5><input type="text" class="" name="nombre" value="<?php echo $contenido['acercade']['nombre']?>"></input></h5>
 								<p>Desarrollador de Software</p>
 							</div>
 						</div>
-						<p><input type="text" class="" name="titulo" value="<?php echo $contenido['acercade']['titulo']?>"></input></p>
+						<p><textarea type="text"  name="titulo" value=""class="col-12"><?php echo $contenido['acercade']['titulo']?></textarea></p>
 						
 					</div>
 				</div>
@@ -86,20 +83,20 @@ include("./config.php");
 					<div class="experience__text">
 						<h3 class="about__title">Sobre la pagina</h3>
 						<div class="experience__item">
-							<h4><input type="text" class="" name="titulo1" value="<?php echo $contenido['acercade']['titulo1']?>"></input></h4>
-							<p><input type="text" class="" name="descripcion" value="<?php echo $contenido['acercade']['descripcion']?>"></input></p>
+							
+							<p><textarea type="text" class="col-12"  name="descripcion" value=""><?php echo $contenido['acercade']['descripcion']?></textarea></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="skills__text">
-						<h3 class="about__title"><input type="text" class="" name="titulo2" value="<?php echo $contenido['acercade']['titulo2']?>"></input></h3>
-						<p><input type="text" class="" name="descripcion2" value="<?php echo $contenido['acercade']['descripcion2']?>"></input></p>
+						<h3 class="about__title">Conclusion</h3>
+						<p><textarea type="text"  name="descripcion2" class="col-12" value=""><?php echo $contenido['acercade']['descripcion2']?></textarea></p>
 					</div>
 				</div>
                 <button type="submit" class="site-btn">Guardar Cambios</button>
-             </form>
-			</div>
+             
+			</div></form>
 		</div>
 	</section>
 	<!-- About Page end -->

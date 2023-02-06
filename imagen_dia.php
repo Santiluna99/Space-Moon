@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
 	<link rel="stylesheet" href="css/fresco.css"/>
+	<link rel="stylesheet" href="css/slick.css"/>
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
@@ -41,13 +42,27 @@
 					</div>
 				</div>
 				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
-				<a href="./index.php" class="site-logo">
+					<a href="./index.php" class="site-logo">
 						<h1>Space Moon</h1>
+						
 					</a>
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
 					<div class="header__switches">
-					
+						
+						<!-- <a href="#" class="nav-switch"><i class="fa fa-bars"></i></a> -->
+						
+						<!-- <ul class="">
+							<li class=""><a href="salir.php">Cerrar Sesion</a></li>
+						</ul>--> 
+						<?php
+                if(empty($_SESSION['nombre'])){
+                    echo "<a class='nav-link' href='login.php'><i class='fa fa-user'></i> Iniciar Sesión </a>";
+                }else{
+                    echo "<a class='nav-link' href='session1.php'><i class='fa fa-user'></i> Mi cuenta </a>";
+                }?>
+
+					</div> 
 					</div>
 				</div>
 			</div>
@@ -57,32 +72,57 @@
 		</div>
 	</header>
 	<!-- Header Section end -->
+	
+	<!-- Hero Section -->
+	<?php echo 
+	"
+	<a class='fresco' href='' data-fresco-group='projects'>
+        <img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["archivo"]."'"." alt=''>
+    </a>
+	"
+	?>
+	<section class="hero__section">
+		<div class="hero-slider">
+        <div class='slide-item'>
+	
+    <!-- <a class='fresco' href='' data-fresco-group='projects'>
+        <img src='img/imagen_dia/".$contenido[$imagen]["titulo"]."/".$contenido[$imagen]["archivo"]."'"." alt=''>
+    </a> -->
+    <div class='hero-text-slider'>
+<div class='text-item'>
+<h2><?php echo $publicacion['titulo']['titulo']?></h2>
+<p><?php echo $publicacion['titulo']['texto']?></p>
+</div>
+</div>
+</div>
+		</div>
+	</section>
+	<?php
 
-	<!-- About Page -->
-	<div class="gallery__page">
-		<div class="gallery__warp">
-			<div class="row">
-				<?php
-foreach ($publicacion as $section=>$values){
-    foreach($values as $key=>$value){
     echo "
-	<div class='col-lg-3 col-md-4 col-sm-6'>
-					<a class='gallery__item fresco' href='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"."' data-fresco-group='gallery'>
-						<img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
-					</a>
-				</div>
+	
+	
+	<div class='slide-item'>
+	
+				<a class='fresco' href='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"."' data-fresco-group='projects'>
+					<img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
+				</a>
+				<div class='hero-text-slider'>
+	<div class='text-item'>
+	<h2>".$publicacion[$section]['titulo']."</h2>
+	<p>".$publicacion[$section]['mensaje']."</p>
+	</div>
+	</div>
+			</div>
+    
+
     ";
-    break;
-    }
     echo "<hr class='invis'>";
     
-}
-?>
-			</div>
-		</div>
-	</div>
-	<!-- About Page end -->
 
+?>
+	<!-- Hero Section end -->
+	
 	<!-- Footer Section -->
 	<footer class="footer__section">
 		<div class="container">
@@ -96,14 +136,7 @@ foreach ($publicacion as $section=>$values){
 	<!-- Footer Section end -->
 
 	<!-- Search Begin -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
+
 	<!-- Search End -->
 
 	<!--====== Javascripts & Jquery ======-->
@@ -115,3 +148,4 @@ foreach ($publicacion as $section=>$values){
 
 	</body>
 </html>
+

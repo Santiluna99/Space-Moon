@@ -5,6 +5,7 @@
 					<li><a href="./about.php">About</a></li>
 					<li><a href="./gallery.php">Gallery</a></li>
 					<li><a href="./contact.php" >Contact</a></li>
+					<li><a href="./imagen_dia.php" >Imagen del Dia</a></li>
 					<?php
                 if(empty($_SESSION['nombre'])){
                     echo "<li><a href='./login.php'>Log In</a></li>";

@@ -4,7 +4,7 @@ include("./config.php");?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Boto | Photography HTML Template</title>
+	<title>Space Moon</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Boto Photo Studio HTML Template">
 	<meta name="keywords" content="photo, html">
@@ -42,8 +42,8 @@ include("./config.php");?>
 					</div>
 				</div>
 				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
-					<a  class="site-logo">
-						<img src="img/logo.png" alt="">
+				<a href="./index.php" class="site-logo">
+						<h1>Space Moon</h1>
 					</a>
 				</div>
 				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
@@ -81,14 +81,13 @@ include("./config.php");?>
 					<div class="experience__text">
 						<h3 class="about__title">Sobre la pagina</h3>
 						<div class="experience__item">
-							<h4><?php echo $contenido['acercade']['titulo1']?></h4>
 							<p><?php echo $contenido['acercade']['descripcion']?></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="skills__text">
-						<h3 class="about__title"><?php echo $contenido['acercade']['titulo2']?></h3>
+						<h3 class="about__title">Conclusion</h3>
 						<p><?php echo $contenido['acercade']['descripcion2']?></p>
 					</div>
 				</div>
