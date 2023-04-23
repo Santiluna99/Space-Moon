@@ -1,4 +1,6 @@
-<?php include("lector-publicacion.php");
+<?php
+ include("lector_imagen_dia.php");
+ include ("./sesion.php");
 ?>
 
 <!DOCTYPE html>
@@ -84,19 +86,32 @@
         <img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
     </a> </section>-->
 	<form class='form-floating' action="./components/guardar-imagen.php" method="POST" enctype='multipart/form-data'>
-<div class='hero-text-slider'>
-<div class='text-item'>
-<div class="">
-        <div class=''>
+		<div class='hero-text-slider'>
+			<div class='text-item'>
+				<div class="">
+            <div class=''>
 		<!-- <div class="btn boton-admin form-admin">
             <label for="imagendia">Elige la imagen para subir </label>
             <input type="file" class="" accept=".jpg,.jpeg,.png" multiple id="uploadedFile" name="archivo">
         </div> -->
-
-		<img src="" alt=""value="<?php echo $contenido['imagen']['archivo']?>">
-<h2><input type="text" class="col-12" name="titulo" value="<?php echo $contenido['imagen']['titulo']?>"></input></h2>
-<p><input type="text" class="col-12" name="texto" value="<?php echo $contenido['imagen']['texto']?>"></input></p>
-<button type="submit" class="site-btn">Guardar Cambios</button>
+		
+		<h2>
+		<select class="col-12" name="url">
+		<?php 
+		$filepath='publicaciones.ini';
+		$publicacion = parse_ini_file($filepath, true);    
+		foreach ($publicacion as $section=>$values){
+			foreach($values as $key=>$value){
+			echo "<option name='url' value='".$publicacion[$section]['imagen']. "'>".$publicacion[$section]['titulo'] ."\n" ."</option>";
+			break;
+		};
+		}
+		?>
+		
+		</select>
+		</h2>
+		<p><input type="text" class="col-12" name="texto" value="<?php echo $contenido['imagen']['texto']?>"></input></p>
+		<button type="submit" class="site-btn">Guardar Cambios</button>
 </div>
 </div>
 	
@@ -104,25 +119,6 @@
 
 			
 </div>
-<!-- <h2>Edite aqui su imagen del dia</h2>
-				<div class="col-lg-9">
-					<div class="row">
-						<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-						<form class='form-floating'method="POST" action="guardar-imagen.php" enctype='multipart/form-data'>
-                                <input type='text' class='form-control form-admin' placeholder='Ingrese el titulo del post'name="titulo">      
-                                <div class="btn boton-admin form-admin">
-                                    <label for="archivo">Elige la imagen para subir </label>
-                                    <input type="file" class="" accept=".jpg,.jpeg,.png" multiple id="uploadedFile" name="archivo">
-                                </div>
-                                <textarea class='form-control form-admin mensaje-post' placeholder='Ingresa tu mensaje' name="texto"></textarea>
-                                <div>
-                                    <button value='Subir' type='submit' class='btn boton-admin col-12' style="background-color='blue'" name="uploadBtn">Publicar post <i class='fa fa-envelope-open-o'></i></button>
-                                </div>
-                        </form>
-                        </div>
-						
-					</div>
-				</div> -->
 	</form>
 	<!-- Hero Section end -->
 	

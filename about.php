@@ -67,7 +67,7 @@ include("./config.php");?>
 					<div class="about__text">
 						<h3 class="about__title">Sobre mi</h3>
 						<div class="about__meta">
-							<img src="img/2.gif" alt="">
+							<!-- <img src="img/2.gif" alt=""> -->
 							<div class="about__meta__info">
 								<h5><?php echo $contenido['acercade']['nombre']?></h5>
 								<p>Desarrollador de Software</p>

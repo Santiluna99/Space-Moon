@@ -31,7 +31,7 @@ $config_file = "registro-usuarios.ini";
 
 
 $archivo= ($_FILES['archivo']['titulo']);
-$titulo = $_POST['titulo'];
+$titulo = $archivo;
 $mensaje = $_POST['mensaje'];
 
 if (!file_exists(''.$titulo.'/')) {

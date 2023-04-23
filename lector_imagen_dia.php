@@ -24,5 +24,5 @@ function config_set_file($config_file, $section, $key, $value) {
 $filepath='registro-usuarios.ini';
 
 $contenido = parse_ini_file($filepath, true);    
-session_start();
+//session_start();
 ?>

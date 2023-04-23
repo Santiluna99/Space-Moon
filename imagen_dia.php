@@ -1,4 +1,7 @@
-<?php include("lector-publicacion.php")?>
+<?php include("lector_imagen_dia.php");
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -74,53 +77,28 @@
 	<!-- Header Section end -->
 	
 	<!-- Hero Section -->
-	<?php echo 
+	<section class="hero__section">
+
+	<div class="hero-slider">
+        <div class='slide-item'>
+		<?php echo 
 	"
-	<a class='fresco' href='' data-fresco-group='projects'>
-        <img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["archivo"]."'"." alt=''>
+	<a class='fresco' href='img/hero-slider/".$contenido["imagen"]["titulo"]."/".$contenido["imagen"]["url"]."' data-fresco-group='projects'>
+        <img src='img/hero-slider/".$contenido["imagen"]["titulo"]."/".$contenido["imagen"]["url"]."'".">
     </a>
 	"
 	?>
-	<section class="hero__section">
-		<div class="hero-slider">
-        <div class='slide-item'>
 	
-    <!-- <a class='fresco' href='' data-fresco-group='projects'>
-        <img src='img/imagen_dia/".$contenido[$imagen]["titulo"]."/".$contenido[$imagen]["archivo"]."'"." alt=''>
-    </a> -->
+		
     <div class='hero-text-slider'>
 <div class='text-item'>
-<h2><?php echo $publicacion['titulo']['titulo']?></h2>
-<p><?php echo $publicacion['titulo']['texto']?></p>
+<h2><?php echo $contenido["imagen"]['texto']?></h2>
+<p><?php echo $contenido["imagen"]['titulo']?></p>
 </div>
 </div>
 </div>
 		</div>
 	</section>
-	<?php
-
-    echo "
-	
-	
-	<div class='slide-item'>
-	
-				<a class='fresco' href='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"."' data-fresco-group='projects'>
-					<img src='img/hero-slider/".$publicacion[$section]["titulo"]."/".$publicacion[$section]["imagen"]."'"." alt=''>
-				</a>
-				<div class='hero-text-slider'>
-	<div class='text-item'>
-	<h2>".$publicacion[$section]['titulo']."</h2>
-	<p>".$publicacion[$section]['mensaje']."</p>
-	</div>
-	</div>
-			</div>
-    
-
-    ";
-    echo "<hr class='invis'>";
-    
-
-?>
 	<!-- Hero Section end -->
 	
 	<!-- Footer Section -->

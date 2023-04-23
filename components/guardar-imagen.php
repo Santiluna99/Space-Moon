@@ -29,13 +29,13 @@ function config_set_file($config_file, $section, $key, $value) {
 
 $config_file = "../registro-usuarios.ini";
 
-$imagendia=$_POST['archivo'];
-$titulo=$_POST['titulo'];
+$url=$_POST['url'];
+$titulo=$url;
 $texto=$_POST['texto'];
 
 
     $config_data = config_read($config_file);
-    config_set($config_data, "imagen", "archivo", $imagendia);
+    config_set($config_data, "imagen", "url", $url);
     config_set($config_data, "imagen", "titulo", $titulo);
     config_set($config_data, "imagen", "texto", $texto);
     

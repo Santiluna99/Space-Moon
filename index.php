@@ -55,12 +55,7 @@
 						<!-- <ul class="">
 							<li class=""><a href="salir.php">Cerrar Sesion</a></li>
 						</ul> -->
-						<?php
-                if(empty($_SESSION['nombre'])){
-                    echo "<a class='nav-link' href='login.php'><i class='fa fa-user'></i> Iniciar Sesión </a>";
-                }else{
-                    echo "<a class='nav-link' href='session1.php'><i class='fa fa-user'></i> Mi cuenta </a>";
-                }?>
+						
 
 					</div> 
 					</div>
@@ -107,34 +102,6 @@ foreach ($publicacion as $section=>$values){
 		</div>
 		 <div class="hero-text-slider">
 			
-			<!--<div class="text-item">
-				<h2>Nature</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Red Heartbeat</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Blue Dreem</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Christian Church</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Red Darkness</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Beauty with Brain</h2>
-				<p>Photography</p>
-			</div>
-			<div class="text-item">
-				<h2>Remarkable</h2>
-				<p>Photography</p>
-			</div> -->
 
 		</div>
 	</section>
