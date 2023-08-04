@@ -4,6 +4,7 @@
 <head>
 	<title>Space Moon</title>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="img/luna.png">
 	<meta name="description" content="Boto Photo Studio HTML Template">
 	<meta name="keywords" content="photo, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,6 +107,7 @@ foreach ($publicacion as $section=>$values){
 		</div>
 	</section>
 	<!-- Hero Section end -->
+	<div style="margin-left:35%">
 	<h2>Cargue aqui su imagen</h2>
 				<div class="col-lg-9">
 					<div class="row">
@@ -125,6 +127,7 @@ foreach ($publicacion as $section=>$values){
 						
 					</div>
 				</div>
+			</div>
 	<!-- Footer Section -->
 	<footer class="footer__section">
 		<div class="container">

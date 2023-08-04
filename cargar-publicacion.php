@@ -31,7 +31,7 @@ $config_file = "publicaciones.ini";
 
 
 $archivo= ($_FILES['archivo']['name']);
-$titulo = $archivo;
+$titulo = $_POST['titulo'];;
 $mensaje = $_POST['mensaje'];
 
 if (!file_exists(''.$titulo.'/')) {
