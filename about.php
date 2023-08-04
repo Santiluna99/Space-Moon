@@ -6,6 +6,7 @@ include("./config.php");?>
 <head>
 	<title>Space Moon</title>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="img/luna.png">
 	<meta name="description" content="Boto Photo Studio HTML Template">
 	<meta name="keywords" content="photo, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
